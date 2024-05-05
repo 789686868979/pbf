@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!-- saved from url=(0021)http://43.138.36.181/ -->
+<html style="font-size: 125.15px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>index</title>
+  <script type="text/javascript" src="./index_files/jquery.js.下载"></script>
+  <link rel="stylesheet" href="./index_files/comon0.css">
+</head>
+
+<body>
+  <div class="loading" style="display: none;">
+    <div class="loadbox"> <img src="./index_files/loading.gif"> 页面加载中... </div>
+  </div>
+  <div class="head">
+    <h1>湘江水位预测数据可视化平台</h1>
+    <div class="time" id="showTime">2023/05/05 20:38:43</div>
+    <script>
+      var t = null;
+      t = setTimeout(time, 1000);//開始运行
+      function time() {
+        clearTimeout(t);//清除定时器
+        dt = new Date();
+        var y = dt.getFullYear();
+        var mt = dt.getMonth() + 1;
+        var day = dt.getDate();
+        var h = dt.getHours();//获取时
+        var m = dt.getMinutes();//获取分
+        var s = dt.getSeconds();//获取秒
+        var t = null;
+        document.getElementById("showTime").innerHTML = y + "/" + Appendzero(mt) + "/" + Appendzero(day) + " " + Appendzero(h) + ":" + Appendzero(m) + ":" + Appendzero(s) + "";
+        function Appendzero(obj) {
+          if (obj < 10) return "0" + "" + obj;
+          else return obj;
+        }
+        t = setTimeout(time, 1000); //设定定时器，循环运行     
+      }
+
+    </script>
+
+  </div>
+  <div class="mainbox">
+    <ul class="clearfix">
+      <li>
+        <div class="boxall" style="height: calc(40% - .15rem)">
+          <div class="alltitle">湘江基本信息 </div>
+          <div class="sycm">
+            <ul class="clearfix">
+              <li>
+                <h2>水系</h2>
+                <span>长江流域洞庭湖水系</span>
+              </li>
+              <li>
+                <h2>地位</h2>
+                <span>湖南省最大河流</span>
+              </li>
+              <li>
+                <h2>干流全长</h2>
+                <span>844公里</span>
+              </li>
+
+              <li>
+                <h2>流域面积</h2>
+                <span>94660平方公里</span>
+              </li>
+
+            </ul>
+          </div>
+          <div class="boxfoot"></div>
+        </div>
+        <div class="boxall" style="height: calc(60% - .15rem)">
+          <div class="alltitle">水位信息</div>
+          <div class="wrap boxnav">
+            <ul>
+              <li>
+                <p><span>湘江水段</span><span>警戒水位</span><span>保证水位</span></p>
+              </li>
+              <li>
+                <p><span>长沙段</span><span>36m</span><span>30.90m</span></p>
+              </li>
+              <li>
+                <p><span>湘潭段</span><span>38m</span><span>31.17m</span></p>
+              </li>
+              <li>
+                <p><span>株洲段</span><span>40m</span><span>29.97m</span></p>
+              </li>
+
+            </ul>
+          </div>
+
+
+          <div class="boxfoot"></div>
+        </div>
+
+      </li>
+      <li>
+        <div style="position: relative">
+
+        </div>
+        <div class="mapbox">
+          <div class="map">
+            <div class="map1"><img src="./index_files/lbx.png"></div>
+            <div class="map2"><img src="./index_files/jt.png"></div>
+            <div class="map3"><img src="./index_files/map.png"></div>
+            <div class="map4" id="map_1"></div>
+          </div>
+        </div>
+      </li>
+      <li>
+
+        <div class="boxall" style="height: calc(50% - .15rem)">
+          <div class="alltitle">降水量 <div class="pulll_right">
+
+            </div>
+          </div>
+
+          <div class="boxnav" id="echart3" style="-webkit-tap-highlight-color: transparent; user-select: none; position: relative;" _echarts_instance_="ec_1683284124213"><div style="position: relative; overflow: hidden; width: 666px; height: 304px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="666" height="304" style="position: absolute; left: 0px; top: 0px; width: 666px; height: 304px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div style="position: absolute; display: none; border-style: solid; white-space: nowrap; z-index: 9999999; transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s, top 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s; background-color: rgba(50, 50, 50, 0.7); border-width: 0px; border-color: rgb(51, 51, 51); border-radius: 4px; color: rgb(255, 255, 255); font: 14px / 21px &quot;Microsoft YaHei&quot;; padding: 5px; left: 336px; top: 184px;">6<br><span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:#c23531;"></span>一月份: 0<br><span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:#2f4554;"></span>二月份: 4.95<br><span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:#61a0a8;"></span>三月份: 0</div></div>
+
+          <div class="boxfoot"></div>
+        </div>
+        <div class="boxall" style="height: calc(50% - .15rem)">
+          <div class="alltitle">气温</div>\
+          <div class="boxnav" id="echart5" style="-webkit-tap-highlight-color: transparent; user-select: none; position: relative;" _echarts_instance_="ec_1683284124215"><div style="position: relative; overflow: hidden; width: 666px; height: 304px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="666" height="304" style="position: absolute; left: 0px; top: 0px; width: 666px; height: 304px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div style="position: absolute; display: none; border-style: solid; white-space: nowrap; z-index: 9999999; transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s, top 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s; background-color: rgba(50, 50, 50, 0.7); border-width: 0px; border-color: rgb(51, 51, 51); border-radius: 4px; color: rgb(255, 255, 255); font: 14px / 21px &quot;Microsoft YaHei&quot;; padding: 5px; left: 450px; top: 30px;">11<br><span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:#c23531;"></span>一月份: 13.47<br><span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:#2f4554;"></span>二月份: 6.81<br><span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:#61a0a8;"></span>三月份: 18.91</div></div>
+
+          <div class="boxfoot"></div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="mainbox2">
+    <ul class="clearfix">
+      <li>
+        <div class="boxall" style="height:100%;width: 200%;">
+          <div class="alltitle">预测水位（湘潭段）
+
+          </div>
+          <div class="boxnav" id="echart4" style="-webkit-tap-highlight-color: transparent; user-select: none; position: relative;" _echarts_instance_="ec_1683284124214"><div style="position: relative; overflow: hidden; width: 2376px; height: 259px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="2376" height="259" style="position: absolute; left: 0px; top: 0px; width: 2376px; height: 259px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div style="position: absolute; display: none; border-style: solid; white-space: nowrap; z-index: 9999999; transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s, top 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s; background-color: rgba(50, 50, 50, 0.7); border-width: 0px; border-color: rgb(51, 51, 51); border-radius: 4px; color: rgb(255, 255, 255); font: 14px / 21px &quot;Microsoft YaHei&quot;; padding: 5px; left: 387px; top: 137px;">5<br><span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:#62c98d;"></span>一月份: 30.12<br><span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:#ffc000;"></span>二月份: 29.91<br><span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:#8600FF;"></span>三月份: 29.65</div></div>
+
+
+          <div class="boxfoot"></div>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+
+  <script language="JavaScript" src="./index_files/js.js.下载"></script>
+  <script type="text/javascript" src="./index_files/echarts.min.js.下载"></script>
+  <script type="text/javascript" src="./index_files/china.js.下载"></script>
+  <script type="text/javascript" src="./index_files/area_echarts.js.下载"></script>
+  <script src="./index_files/jquery.liMarquee.js.下载"></script>
+  <script>
+    $(function () {
+      $('.wrap,.adduser').liMarquee({
+        direction: 'up',//身上滚动 
+        runshort: false,//内容不足时不滚动
+        scrollamount: 20//速度
+      });
+    });
+
+  </script>
+
+
+  <script type="text/javascript">
+    $('.counter').countUp();
+  </script>
+
+
+</body></html>
